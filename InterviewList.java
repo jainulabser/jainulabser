@@ -36,6 +36,8 @@ class Interviewee {// store and get all Interviewee Details
 
 public class InterviewList {
 	private Queue<Interviewee> mIntervieweeCollection = new LinkedList<Interviewee>();// Queue Creation
+	private Iterator<Interviewee> iterator = mIntervieweeCollection.iterator();// create Iterator for traversing a
+																				// collection
 	private int mTotalInterviewee;// all interviewees count
 	private Scanner mScanner = new Scanner(System.in);
 
@@ -82,12 +84,9 @@ public class InterviewList {
 	}
 
 	private void printList() {
-		Iterator<Interviewee> iterator = mIntervieweeCollection.iterator();/*
-							 * use iterator Interface for traversal get all information till rear
-							 */
 		int count = 0;
 		while (iterator.hasNext()) {// use hasNext() method for check whether queue is not empty
-			Interviewee interviewee = (Interviewee) iterator.next();// is yes point next object and store it to
+			Interviewee interviewee = (Interviewee) iterator.next();// if yes point next object and store it to
 																	// Interviewee object
 			if (count == 0) {// from the front only one person inside room
 				System.out.println("Inside Room : ");
