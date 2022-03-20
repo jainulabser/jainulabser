@@ -35,9 +35,9 @@ class Interviewee {// store and get all Interviewee Details
 /* Interview List Class */
 
 public class InterviewList {
-	Queue<Interviewee> mIntervieweeCollection = new LinkedList<Interviewee>();// Queue Creation
-	int mTotalInterviewee;// all interviewees count
-	Scanner mScanner = new Scanner(System.in);
+	private Queue<Interviewee> mIntervieweeCollection = new LinkedList<Interviewee>();// Queue Creation
+	private int mTotalInterviewee;// all interviewees count
+	private Scanner mScanner = new Scanner(System.in);
 
 	private void indexDetails() {// Index Page
 		do {
@@ -77,12 +77,12 @@ public class InterviewList {
 			interviewee.setMail(mScanner.next());// setMail
 			mIntervieweeCollection.add(interviewee);// perform enqueue operaion collection
 			System.out.println("Sucessfully Added");
+			System.out.println();
 		}
 	}
 
 	private void printList() {
-		Iterator<Interviewee> iterator = mIntervieweeCollection
-				.iterator();/*
+		Iterator<Interviewee> iterator = mIntervieweeCollection.iterator();/*
 							 * use iterator Interface for traversal get all information till rear
 							 */
 		int count = 0;
